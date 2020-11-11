@@ -1,19 +1,23 @@
 <template>
   <div id="app">
-    <BasicCard title='My Test Vue App' />
-    <a-button type='primary'>Test</a-button>
+    <a-layout>
+      <a-layout-content>
+        <DemoView />
+      </a-layout-content>
+    </a-layout>
   </div>
 </template>
 
 <script>
-import { Button } from 'ant-design-vue'
-import BasicCard from './components/BasicCard.vue'
+import { Layout } from 'ant-design-vue'
+import DemoView from './views/DemoView.vue'
 
 export default {
   name: 'App',
   components: {
-    BasicCard,
-    'a-button': Button,
+    'a-layout': Layout,
+    'a-layout-content': Layout.Content,
+    DemoView,
   },
 }
 </script>
